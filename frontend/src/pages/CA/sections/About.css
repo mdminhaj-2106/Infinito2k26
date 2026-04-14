@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+
+.about-section {
+  min-height: 100vh;
+  padding: clamp(20px, 5vw, 60px) 20px;
+  background: linear-gradient(135deg, #f9f9f9, #ececec);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* overflow-x: hidden; */
+}
+
+.about-content {
+  flex: 1;
+  text-align: center;
+}
+
+.why {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(135deg, #222, #555);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.whyca {
+  font-size: clamp(0.95rem, 3vw, 1.3rem);
+  padding: clamp(12px, 4vw, 20px);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  line-height: 1.6;
+}
+
+.about-vector img {
+  max-width: 90%;
+  height: 320px;
+  border-radius: 12px;
+  transition: transform 0.1s ease-in;
+}
+
+.about-vector img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .why {
+    font-size: 1.6rem;
+  }
+  .whyca {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}

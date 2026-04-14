@@ -1,0 +1,119 @@
+@import url('https://fonts.cdnfonts.com/css/a-atmospheric');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/a-atmospheric');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  z-index: 2;
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+  place-items: center;
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  gap: 15%;
+  height: 100vh;
+  flex-direction: column;
+  background-image: url('./../../../public/aboutUsbg.png');
+  background-repeat: round;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  line-height: 1.5rem;
+}
+
+.side {
+  width: 50%;
+  position: relative;
+  /* background-color: black; */
+}
+.img {
+  position: absolute;
+  width: 50%;
+  left: 24%;
+}
+
+.img2 {
+  width: 50%;
+  position: absolute;
+  left: 29%;
+  top: 25px;
+}
+.content2 {
+  width: 80%;
+  font-size: 1rem;
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .content {
+    width: 100vw;
+    color: black;
+  }
+  .side {
+    width: 100vw;
+  }
+  .container {
+    gap: 15px;
+  }
+  .h2 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 930px) {
+  .container {
+    gap: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 0%;
+    height: fit-content;
+  }
+}
+
+.h2 {
+  font-size: 3rem;
+  font-family: 'a Atmospheric', sans-serif;
+  color: orange;
+  padding-bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.h2::before {
+  content: '';
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -12px;
+  background-color: red;
+  display: none;
+}
+
+.show {
+  opacity: 1;
+}

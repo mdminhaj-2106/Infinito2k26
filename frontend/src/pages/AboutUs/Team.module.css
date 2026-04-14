@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Atmospheric';
+  src: url('aAtmospheric.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.teamContainer {
+
+  text-align: center;
+  padding: 20px;
+  /* border: 2px solid blue; */
+  font-family: 'Raleway', sans-serif;
+  
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  align-items: center; /* Center align items */
+  /* background-color: #9a4325; */
+  background-image: url(./bg4.jpg);
+  background-size: cover;
+background-position: center;
+  color: white;
+}
+
+.heading {
+  margin-top: 5rem;
+  font-size: 3rem;
+  color:  #ffffff;;
+  font-family: 'Atmospheric', sans-serif;
+
+}
+
+.roleSection {
+  width: 100%;
+  max-width: 1200px; /* Limit the width of each section */
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.teamMember {
+  background-image: url('../assets/bg.png');
+  /* Dark card background */
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.teamMemberImage img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 2px solid #ff6700; /* Orange separator */
+}
+
+.teamMember:hover {
+  transform: translateY(-10px);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+  justify-items: center;
+  width: 100%;
+  justify-content: center; /* Center items horizontally */
+  align-content: center; /* Center items vertically */
+}
+
+.teamMemberInfo {
+  padding: 10px 0;
+}
+
+.teamMemberInfo h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.teamMemberInfo p {
+  margin: 0;
+  color: #ffcc00;
+  font-size: 14px;
+}
+.oneCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+.twoCards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 992px) {
+  .teamGrid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Ensure 3 columns on larger screens */
+    gap: 80px;
+  }
+  .oneCard {
+    grid-template-columns: 1fr;
+  }
+
+  .twoCards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    justify-content: center; /* Center two cards */
+  }
+  .teamContainer {
+    padding: 10px;
+    margin-top: 90px;
+  }
+  .oneCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .twoCards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: 1fr; /* 1 column on smaller screens */
+    justify-content: center; /* Center a single card */
+    align-content: center;
+  }
+}
+
+@media (max-width: 770px) {
+  .teamGrid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Ensure columns fit on small screens */
+    gap: 15px;
+  }
+
+  .teamContainer {
+    padding: 10px;
+    margin-top: 390px;
+  }
+
+  .teamMember {
+    max-width: 100%; /* Allow full width on smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .teamContainer {
+    padding: 10px;
+    margin-top: 290px;
+  }
+}
+body {
+  background-color: #f3f3f3;
+}
+
+@media (max-width: 930px) {
+  .teamContainer {
+    margin-top: 20px;
+  }
+}
