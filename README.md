@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./frontend/public/infinito-logo.png" alt="Infinito Logo" width="200" />
+  <img src="./frontend/infinito-logo.png" alt="Infinito Logo" width="200" />
 
   # Infinito 2024 / 2025 - Official Sports Fest Platform
 
